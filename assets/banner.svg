@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%" style="background:#0f172a; border-radius: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <linearGradient id="stream-pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <!-- SVG Filters for Glow Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-size: 38px;
+      font-weight: 800;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-size: 17px;
+      font-weight: 400;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-size: 12px;
+      font-weight: 700;
+      fill: #e0e7ff;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+    .metric-value {
+      font-size: 15px;
+      font-weight: 700;
+      fill: #38bdf8;
+    }
+    .metric-label {
+      font-size: 12px;
+      fill: #94a3b8;
+    }
+
+    /* CSS Animations for Dynamic Dynamic/Animated Background Elements */
+    @keyframes pulse-wave {
+      0% { transform: scaleX(0.95); opacity: 0.3; }
+      50% { transform: scaleX(1.05); opacity: 0.8; }
+      100% { transform: scaleX(0.95); opacity: 0.3; }
+    }
+
+    @keyframes float-node {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes signal-flow {
+      0% { stroke-dashoffset: 100; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    .animated-wave {
+      animation: pulse-wave 6s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .floating-card-1 {
+      animation: float-node 5s ease-in-out infinite;
+    }
+
+    .floating-card-2 {
+      animation: float-node 6s ease-in-out infinite 1s;
+    }
+
+    .floating-card-3 {
+      animation: float-node 5.5s ease-in-out infinite 2s;
+    }
+
+    .stream-line {
+      stroke-dasharray: 10, 10;
+      animation: signal-flow 3s linear infinite;
+    }
+  </style>
+
+  <!-- Base Layer Background -->
+  <rect width="1200" height="320" rx="12" fill="url(#bg-grad)" />
+
+  <!-- DYNAMIC / ANIMATED BACKGROUND ELEMENTS (BEHIND CONTENT & FOREGROUND TEXT) -->
+  <g class="animated-wave" opacity="0.4">
+    <path d="M-100,220 C150,150 350,280 600,200 C850,120 1050,250 1300,180 L1300,320 L-100,320 Z" fill="url(#stream-pulse)" />
+    <path d="M-100,250 C200,180 400,290 650,220 C900,150 1100,270 1300,210 L1300,320 L-100,320 Z" fill="url(#primary-glow)" opacity="0.15" />
+  </g>
+
+  <!-- Background Animated Streaming Grid Lines -->
+  <g opacity="0.25">
+    <line x1="100" y1="260" x2="1100" y2="260" stroke="#6366f1" stroke-width="1.5" class="stream-line" />
+    <line x1="100" y1="285" x2="1100" y2="285" stroke="#a855f7" stroke-width="1" class="stream-line" />
+  </g>
+
+  <!-- Dynamic Animated Metric Nodes / Cards (Right Side Background Area) -->
+  <g class="floating-card-1">
+    <rect x="820" y="50" width="160" height="60" rx="10" fill="url(#card-grad)" stroke="#6366f1" stroke-opacity="0.4" stroke-width="1" />
+    <text x="840" y="75" class="metric-value">Sub-500ms</text>
+    <text x="840" y="93" class="metric-label">WebRTC Latency</text>
+  </g>
+
+  <g class="floating-card-2">
+    <rect x="1000" y="110" width="150" height="60" rx="10" fill="url(#card-grad)" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1" />
+    <text x="1020" y="135" class="metric-value">4K / 60 FPS</text>
+    <text x="1020" y="153" class="metric-label">Live Transcoding</text>
+  </g>
+
+  <g class="floating-card-3">
+    <rect x="860" y="180" width="170" height="60" rx="10" fill="url(#card-grad)" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1" />
+    <text x="880" y="205" class="metric-value">SRT &amp; RTMP</text>
+    <text x="880" y="223" class="metric-label">High Reliability</text>
+  </g>
+
+  <!-- FOREGROUND LAYER: TITLE, SUBTITLE & BADGES (CRITICAL FOREGROUND GUARANTEE) -->
+  <g transform="translate(60, 0)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, 50)">
+      <rect width="270" height="28" rx="14" fill="#312e81" fill-opacity="0.8" stroke="#6366f1" stroke-width="1" />
+      <circle cx="16" cy="14" r="4" fill="#22c55e" filter="url(#glow)" />
+      <text x="30" y="19" class="badge-text">Real-Time Video Ecosystem</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="125" class="title-text" filter="url(#glow)">Awesome Real-Time Video Streaming</text>
+    <text x="0" y="168" class="title-text" fill="url(#primary-glow)">&amp; Ingestion Platforms</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="215" class="subtitle-text">Curated guide to SaaS video APIs, WebRTC media servers &amp; high-performance open-source ingest software.</text>
+
+    <!-- Feature Tag Chips in Foreground -->
+    <g transform="translate(0, 245)">
+      <rect x="0" y="0" width="115" height="26" rx="6" fill="#1e293b" stroke="#334155" />
+      <text x="12" y="17" font-size="11" fill="#cbd5e1" font-weight="600">⚡ Sub-Second</text>
+
+      <rect x="125" y="0" width="130" height="26" rx="6" fill="#1e293b" stroke="#334155" />
+      <text x="137" y="17" font-size="11" fill="#cbd5e1" font-weight="600">🎥 WebRTC / HLS</text>
+
+      <rect x="265" y="0" width="130" height="26" rx="6" fill="#1e293b" stroke="#334155" />
+      <text x="277" y="17" font-size="11" fill="#cbd5e1" font-weight="600">🛠️ Open-Source</text>
+    </g>
+  </g>
+</svg>
