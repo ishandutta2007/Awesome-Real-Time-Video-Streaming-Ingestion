@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Real-Time-Video-Streaming-Ingestion"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Real-Time-Video-Streaming-Ingestion?style=social" alt="GitHub stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Real-Time-Video-Streaming-Ingestion"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Real-Time-Video-Streaming-Ingestion?style=social" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Real-Time-Video-Streaming-Ingestion/fork"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Real-Time-Video-Streaming-Ingestion?style=social" alt="GitHub forks"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -60,7 +60,7 @@
 
 ## 💻 Open-Source GitHub Projects
 
-*Ranked by GitHub Star Count (Descending)* 🌟
+*Ranked by GitHub Stars_Count (Descending)* 🌟
 
 ### ⚡ Live Streaming & Ingestion Servers
 
@@ -134,7 +134,7 @@ Contributions are welcome! Please follow these steps to keep the list clean and 
 
 1. 🍴 **Fork the repository**.
 2. 📝 **Add/edit entries in `README.md`** following the established format and column structures.
-3. 📌 **Include**: Name, official site/repo link, star badge (for open source), 1–2 sentence objective summary, and accurate pricing or star counts.
+3. 📌 **Include**: Name, official site/repo link, Stars_Badge (for open source), 1–2 sentence objective summary, and accurate pricing or Stars_Counts.
 4. 🔀 **Submit a Pull Request (PR)** with a clear title and short explanation.
 
 ---
